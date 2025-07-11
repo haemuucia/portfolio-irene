@@ -1,6 +1,6 @@
 "use client";
 
-import TiltedCard from "./Components/TiltedCard/TiltedCard";
+import TiltedCard from "../TiltedCard/TiltedCard";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
