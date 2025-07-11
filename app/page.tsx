@@ -74,7 +74,7 @@ export default function Home() {
         View Projects
       </button>
       <a
-        href="/assets/cv/veronica-irene-cv.pdf"
+        href="/assets/Veronica Irene_CVport.pdf"
         download="veronica_irene_cv.pdf"
         className="border border-cyan-300 text-cyan-400 font-semibold px-5 sm:px-6 py-2 rounded-xl hover:bg-cyan-300 hover:text-black transition duration-300"
       >
