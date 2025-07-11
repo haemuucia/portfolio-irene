@@ -1,8 +1,41 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+html {
+  background-color: #FAFAFA; /* Light BG */
+}
+
+html.dark {
+  background-color: #0E0A2A; /* Dark BG */
+}
+.warning, .not-for-mobile {
+  display: none !important;
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+@keyframes gradient-border {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.animate-gradient-border {
+  background-size: 200% 200%;
+  animation: gradient-border 3s ease infinite;
+  z-index: -1;
 }
 
 @theme inline {
@@ -19,8 +52,37 @@
   }
 }
 
+@layer utilities {
+  .icon-hover-scale {
+    @apply transition-transform duration-300 hover:scale-125;
+  }
+
+  .gradient-border-hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 0.75rem; /* matches rounded-xl */
+    padding: 2px;
+    background: linear-gradient(270deg, #8b5cf6, #ec4899, #0ea5e9);
+    background-size: 600% 600%;
+    animation: gradient-border 4s ease infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .group:hover .gradient-border-hover::before {
+    opacity: 1;
+  }
+}
+
+.animate-text {
+  background-size: 200% 200%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Outfit', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
 }

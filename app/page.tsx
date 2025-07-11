@@ -1,103 +1,96 @@
-import Image from "next/image";
+"use client";
+import { useRef } from "react";
+import Lanyard from "./Components/Lanyard/Lanyard";
+import RotatingText from "./Components/RotatingText/RotatingText";
+import AboutMe from "./Components/AboutMe/AboutMe";
+import Projects from "./Components/Projects/ProjectSection";
+import Skills from "./Components/Skills/Skills";
+import Certification from "./Components/Certification/Certification";
+import Awards from "./Components/Awards/Awards";
+import Footer from "./Components/Footer/Footer";
+import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si";
+import { FiMail } from "react-icons/fi";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const projectRef = useRef<HTMLElement>(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  return (
+    <div className="min-h-screen overflow-x-hidden bg-[#f5f7ff] dark:bg-[#0E0A2A] text-black dark:text-white font-outfit transition-colors duration-500 scrollbar-hide">
+      <main className="container mx-auto px-4 sm:px-6 pt-5 pb-16">
+<section
+  id="hero"
+  className="flex flex-col-reverse lg:grid lg:grid-cols-12 gap-10 items-center"
+>
+  {/* Lanyard on top for small screens, right on large screens */}
+  <div className="order-1 lg:order-2 lg:col-span-6 flex justify-center mb-4 sm:mb-6 lg:mb-0">
+    <div className="w-full max-w-xs sm:max-w-sm md:max-w-md h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+      <Lanyard />
+    </div>
+  </div>
+
+  {/* Text below on small screens, left on large screens */}
+  <div className="order-2 lg:order-1 lg:col-span-6 flex flex-col gap-4 sm:gap-6 justify-center text-center lg:text-left">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+      Hello, I'm{" "}
+      <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 bg-clip-text text-transparent hover:animate-pulse transition-all duration-300">
+        Irene
+      </span>
+    </h1>
+
+    <div className="flex justify-center lg:justify-start gap-2 sm:gap-3 items-center flex-wrap">
+      <span className="text-base sm:text-lg font-semibold text-gray-700 dark:text-gray-300">
+        I am ready to be a
+      </span>
+      <RotatingText
+        texts={["AI Engineer", "Web Developer", "Software Engineer", "Web Designer"]}
+        mainClassName="px-3 py-1 rounded-full bg-[#FDCBFF] text-black text-base sm:text-lg font-semibold shadow-md"
+        staggerFrom="last"
+        initial={{ y: "100%" }}
+        animate={{ y: 0 }}
+        exit={{ y: "-120%" }}
+        staggerDuration={0.025}
+        splitLevelClassName="overflow-hidden pb-1"
+        transition={{ type: "spring", damping: 30, stiffness: 400 }}
+        rotationInterval={2000}
+      />
+    </div>
+
+    <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-md leading-relaxed mx-auto lg:mx-0">
+      Fusing AI and web technology to craft smart and impactful solutions that think and resonate deeply.
+    </p>
+
+    <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-5 text-xl sm:text-2xl">
+      <a href="https://github.com/haemuucia" target="_blank" className="hover:text-[#4078c0] dark:hover:text-[#58a6ff]" title="GitHub"><SiGithub /></a>
+      <a href="https://www.linkedin.com/in/veronicairene" target="_blank" className="hover:text-[#0a66c2]" title="LinkedIn"><SiLinkedin /></a>
+      <a href="https://instagram.com/verrrene" target="_blank" className="hover:text-[#E1306C] dark:hover:text-[#F77737]" title="Instagram"><SiInstagram /></a>
+      <a href="mailto:veronicairene315@gmail.com" target="_blank" className="hover:text-[#0a66c2]" title="Email"><FiMail /></a>
+    </div>
+
+    <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mt-2">
+      <button
+        onClick={() => projectRef.current?.scrollIntoView({ behavior: "smooth" })}
+        className="bg-gradient-to-r from-cyan-300 to-blue-400 text-black font-semibold px-5 sm:px-6 py-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+      >
+        View Projects
+      </button>
+      <a
+        href="/assets/cv/veronica-irene-cv.pdf"
+        download="veronica_irene_cv.pdf"
+        className="border border-cyan-300 text-cyan-400 font-semibold px-5 sm:px-6 py-2 rounded-xl hover:bg-cyan-300 hover:text-black transition duration-300"
+      >
+        Download CV
+      </a>
+    </div>
+  </div>
+</section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      <AboutMe />
+      <Projects ref={projectRef} />
+      <Skills />
+      <Certification />
+      <Awards />
+      <Footer />
     </div>
   );
 }
