@@ -58,7 +58,7 @@ const ProjectSection = forwardRef<HTMLElement>((_, ref) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {visibleProjects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <ProjectCard {...project} key={index} />
           ))}
         </div>
 
