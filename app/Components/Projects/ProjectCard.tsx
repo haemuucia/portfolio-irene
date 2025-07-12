@@ -11,7 +11,7 @@ type Project = {
   tech: string[];
   github: string;
   demo?: string;
-  category: string;
+  category: string[];
   role?: string;
 };
 
