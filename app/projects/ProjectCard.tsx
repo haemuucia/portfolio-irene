@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { techIcons } from "../../../lib/tech-icons";
+import { techIcons } from "../../lib/tech-icons";
 import { FaTools } from "react-icons/fa"; 
 
 type Project = {
@@ -11,7 +11,7 @@ type Project = {
   tech: string[];
   github: string;
   demo?: string;
-  category: string;
+  category: string[];
   role?: string;
 };
 
@@ -82,16 +82,26 @@ export default function ProjectCard({
         </div>
 
         <div className="pt-4">
+          {title === "Personal Portfolio" ? (
           <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg border border-transparent bg-gradient-to-r from-blue-400 to-cyan-300 text-black hover:scale-105 transition-transform"
-          >
-            <GithubIcon size={18} />
-            GitHub
+          href="https://veronicairene.site/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg border border-transparent bg-gradient-to-r from-purple-400 to-pink-400 text-white hover:scale-105 transition-transform">
+          Website
           </a>
-        </div>
+          ) : (
+          github && (
+          <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg border border-transparent bg-gradient-to-r from-blue-400 to-cyan-300 text-black hover:scale-105 transition-transform">
+          <GithubIcon size={18} />
+          GitHub
+          </a>
+          ))}
+          </div>
       </div>
     </div>
   );

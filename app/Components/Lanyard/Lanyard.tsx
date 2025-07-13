@@ -1,7 +1,7 @@
-/* eslint-disable react/no-unknown-property */
 "use client";
 import { ThreeElements } from '@react-three/fiber';
 import { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Canvas, extend, useFrame } from "@react-three/fiber";
 import {
   useGLTF,
@@ -21,7 +21,7 @@ import {
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
 
-const cardGLB = "/assets/lanyard/card (2).glb";
+const cardGLB = "/assets/lanyard/card2.glb";
 const lanyard = "/assets/lanyard/lanyard.png";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
@@ -282,17 +282,17 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
           </group>
         </RigidBody>
       </group>
-      <mesh ref={band}>
-        <meshLineGeometry />
-        <meshLineMaterial
-          color="white"
-          depthTest={false}
-          resolution={isSmall ? [1000, 2000] : [1000, 1000]}
-          useMap
-          map={texture}
-          repeat={[-4, 1]}
-          lineWidth={1}
-        />
+        <mesh ref={band}>
+        {React.createElement('meshLineGeometry', {})}
+        {React.createElement('meshLineMaterial', {
+          color: 'white',
+          depthTest: false,
+          resolution: isSmall ? [1000, 2000] : [1000, 1000],
+          useMap: true,
+          map: texture,
+          repeat: [-4, 1],
+          lineWidth: 1,
+        })}
       </mesh>
     </>
   );

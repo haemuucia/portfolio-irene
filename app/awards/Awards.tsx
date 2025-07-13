@@ -6,7 +6,7 @@ const awards = [
   {
     image: "/assets/certificate/awardapac.jpeg",
     title: "Google APAC Solution Challenge",
-    placement: "Participants",
+    placement: "Participant",
     description:
       "Competition that invites university students across the Asia-Pacific region to develop innovative tech solutions using Google technologies to address one or more of the United Nations’ 17 Sustainable Development Goals (SDGs).",
     scale: "International",
@@ -15,7 +15,7 @@ const awards = [
   {
     image: "/assets/certificate/awardsic.jpeg",
     title: "Samsung Innovation Campus Batch 5",
-    placement: "Semifinalist (Top 40 University Team)",
+    placement: "Semifinalist",
     description: "Samsung Innovation Campus Batch 5 is a six-month program that trains high school and university students in AI, IoT, and coding. Out of 7,590 applicants, over 4,000 were selected to join (1st stage). Participants worked in teams to build tech-based solutions, joined career development sessions, and competed in a national showcase judged by industry experts.",
     scale: "National",
     link: "https://drive.google.com/file/d/11xheXxfhFYty7b61GoupxV7t1Vm3ZY6W/view?usp=drive_link",
@@ -23,7 +23,7 @@ const awards = [
   {
     image: "/assets/certificate/gemastik.png",
     title: "GEMASTIK 2024 Smart Device, Embedded System, and IoT Division",
-    placement: "Participants",
+    placement: "Participant",
     description: "GEMASTIK (Pagelaran Mahasiswa Nasional Bidang TIK) is a national tech competition in Indonesia organized by the Ministry of Education. It promotes student innovation and excellence in fields like smart devices, AI, cybersecurity, IoT, and more.",
     scale: "National",
     link: "https://drive.google.com/file/d/1AmdU7KafIzQ7EM0nwbyMmjA0MInpoI_B/view",

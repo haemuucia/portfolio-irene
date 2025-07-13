@@ -2,12 +2,12 @@
 import { useRef } from "react";
 import Lanyard from "./Components/Lanyard/Lanyard";
 import RotatingText from "./Components/RotatingText/RotatingText";
-import AboutMe from "./Components/AboutMe/AboutMe";
-import Projects from "./Components/Projects/ProjectSection";
-import Skills from "./Components/Skills/Skills";
-import Certification from "./Components/Certification/Certification";
-import Awards from "./Components/Awards/Awards";
-import Footer from "./Components/Footer/Footer";
+import AboutMe from "./aboutme/AboutMe";
+import Projects from "./projects/ProjectSection";
+import Skills from "./skills/Skills";
+import Certification from "./certification/Certification";
+import Awards from "./awards/Awards";
+import Footer from "./footer/Footer";
 import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 
@@ -21,14 +21,12 @@ export default function Home() {
   id="hero"
   className="flex flex-col-reverse lg:grid lg:grid-cols-12 gap-10 items-center"
 >
-  {/* Lanyard on top for small screens, right on large screens */}
   <div className="order-1 lg:order-2 lg:col-span-6 flex justify-center mb-4 sm:mb-6 lg:mb-0">
     <div className="w-full max-w-xs sm:max-w-sm md:max-w-md h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
       <Lanyard />
     </div>
   </div>
 
-  {/* Text below on small screens, left on large screens */}
   <div className="order-2 lg:order-1 lg:col-span-6 flex flex-col gap-4 sm:gap-6 justify-center text-center lg:text-left">
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
       Hello, I'm{" "}
@@ -74,10 +72,9 @@ export default function Home() {
         View Projects
       </button>
       <a
-        href="/assets/Veronica Irene_CVport.pdf"
+        href="/assets/VeronicaIrene_resume.pdf"
         download="veronica_irene_cv.pdf"
-        className="border border-cyan-300 text-cyan-400 font-semibold px-5 sm:px-6 py-2 rounded-xl hover:bg-cyan-300 hover:text-black transition duration-300"
-      >
+        className="border border-cyan-300 text-cyan-400 font-semibold px-5 sm:px-6 py-2 rounded-xl hover:bg-cyan-300 hover:text-black transition duration-300">
         Download CV
       </a>
     </div>

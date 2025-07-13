@@ -1,6 +1,6 @@
 "use client";
 
-import { techIcons } from "../../../lib/tech-icons";
+import { techIcons } from "../../lib/tech-icons";
 
 const categoryGradientMap: Record<string, string> = {
   frontend: "from-blue-400 to-cyan-300",
