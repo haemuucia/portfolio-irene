@@ -86,7 +86,7 @@ export default function AboutMe() {
                     <div className="w-8 h-8 mb-2 rounded-full bg-blue-300 dark:bg-blue-500 text-white flex items-center justify-center text-lg shadow-md z-10">
                       🎓
                     </div>
-                    <h4 className="text-xl font-semibold">
+                   <h4 className="text-xl font-semibold">
                       President University
                     </h4>
                     <p className="text-sm text-white/70">
@@ -97,13 +97,13 @@ export default function AboutMe() {
                       ○ Concentration: Artificial Intelligence <br/>
                       ○ Relevant Courses: Web & Server-Side Programming, Wireless & Mobile Programming, Software Engineering, 
                       Computer Vision, Natural Language Processing, Understanding, & Generation, Image
-                      Processing and Recognition, Data Structures & Algorithms                    </p>
+                      Processing and Recognition, Data Structures & Algorithms
+                    </p>
                   </div>
                 </motion.div>
               </div>
             </div>
 
-            {/* High School */}
             <div className="relative w-full flex justify-end">
               <div className="w-full md:w-1/2 pl-8">
                 <motion.div
