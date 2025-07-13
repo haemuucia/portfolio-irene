@@ -9,7 +9,7 @@ type Project = {
   description: string;
   image: string;
   tech: string[];
-  github: string;
+  github?: string;
   demo?: string;
   category: string[];
   role?: string;
