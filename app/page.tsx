@@ -17,11 +17,10 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f5f7ff] dark:bg-[#0E0A2A] text-black dark:text-white font-outfit transition-colors duration-500 scrollbar-hide">
       <main className="container mx-auto px-4 sm:px-6 pt-5 pb-16">
-<section
-  id="hero"
-  className="flex flex-col lg:grid lg:grid-cols-12 gap-10 items-center"
->
-  <div className="order-1 lg:order-2 lg:col-span-6 flex justify-center mb-4 sm:mb-6 lg:mb-0">
+      <section
+        id="hero"
+      className="flex flex-col lg:grid lg:grid-cols-12 gap-10 items-center">
+  <div className="order-1 lg:order-2 lg:col-span-6 flex justify-center mt-6 sm:mt-0 mb-4 sm:mb-6 lg:mb-0">
     <div className="w-full max-w-xs sm:max-w-sm md:max-w-md h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
       <Lanyard />
     </div>
