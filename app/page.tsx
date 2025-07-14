@@ -71,7 +71,7 @@ export default function Home() {
         View Projects
       </button>
       <a
-        href="/assets/VeronicaIrene_resume.pdf"
+        href="/assets/VeronicaIrene_CV.pdf"
         download="VeronicaIrene_resume.pdf"
         className="border border-cyan-300 text-cyan-400 font-semibold px-5 sm:px-6 py-2 rounded-xl hover:bg-cyan-300 hover:text-black transition duration-300">
         Download CV
