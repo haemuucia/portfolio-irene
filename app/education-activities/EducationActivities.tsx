@@ -130,9 +130,14 @@ export default function EducationActivities() {
                         {activity.type}
                       </span>
                     </div>
-                    <p className="mt-3 text-sm text-white/90 leading-relaxed">
-                      {activity.description}
-                    </p>
+                    <ul className="mt-3 space-y-2 text-sm text-white/90 leading-relaxed">
+                      {activity.highlights.map((item, i) => (
+                        <li key={i} className="flex gap-2">
+                          <span className="text-white/70 shrink-0 mt-0.5">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </motion.div>

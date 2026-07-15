@@ -9,7 +9,7 @@ export type Activity = {
   role: string;
   period: string;
   type: ActivityType;
-  description: string;
+  highlights: string[];
   logo?: string;
 };
 
@@ -19,15 +19,19 @@ export const activities: Activity[] = [
     role: "Secretary I",
     period: "2024 – 2025",
     type: "Organization",
-    description:
-      "Brief description of what you did, contributed, or achieved in this activity.",
+    highlights: [
+      "Prepared 40+ meeting agendas, recorded minutes, and maintained administrative records.",
+      "Coordinated correspondence and ensured timely dissemination of information across divisions.",
+    ],
   },
   {
-    name: "PUCatSo (Catholic Society)",
-    role: "Member of Secretary",
+    name: "Computer Science Gala",
+    role: "Event Organizer",
     period: "2024 - 2025",
     type: "Community",
-    description:
-      "What events you organized, skills you used, or impact you made.",
+    highlights: [
+      "Coordinated event planning by preparing detailed rundowns and execution timelines while collaborating with 5+ cross-functional divisions to ensure seamless event operations.",
+      "Facilitated on-site event execution through audience engagement, public speaking, and real-time coordination to deliver a smooth participant experience.",
+    ],
   },
 ];
