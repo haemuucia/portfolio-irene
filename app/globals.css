@@ -1,20 +1,31 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+/* Outfit loaded via @fontsource/outfit in layout.tsx — do NOT add Google Fonts @import here */
 
 html {
-  background-color: #FAFAFA;
+  background-color: #FAF7F2;
 }
 
 html.dark {
-  background-color: #0E0A2A;
+  background-color: #1A231C;
 }
 .warning, .not-for-mobile {
   display: none !important;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAF7F2;
+  --foreground: #2D3436;
+  --matcha-50: #E8EFE6;
+  --matcha-300: #A8C5A0;
+  --matcha-500: #6B8F71;
+  --matcha-700: #3D5A42;
+  --strawberry-100: #F9E8ED;
+  --strawberry-300: #E8A0B5;
+  --strawberry-500: #D4839A;
+  --strawberry-700: #9E5A6F;
+  --cream: #FAF7F2;
+  --dark-bg: #1A231C;
+  --dark-card: #2A3D2E;
 }
 
 @keyframes gradient-border {
@@ -41,14 +52,54 @@ html.dark {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-matcha-50: var(--matcha-50);
+  --color-matcha-300: var(--matcha-300);
+  --color-matcha-500: var(--matcha-500);
+  --color-matcha-700: var(--matcha-700);
+  --color-strawberry-100: var(--strawberry-100);
+  --color-strawberry-300: var(--strawberry-300);
+  --color-strawberry-500: var(--strawberry-500);
+  --color-strawberry-700: var(--strawberry-700);
+  --color-cream: var(--cream);
+  --color-dark-bg: var(--dark-bg);
+  --color-dark-card: var(--dark-card);
+  --font-family-outfit: "Outfit", sans-serif;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1A231C;
+    --foreground: #F0EDE8;
+  }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) translateX(12px);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: float-up linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-up {
+    animation: none;
+    display: none;
   }
 }
 
@@ -64,7 +115,7 @@ html.dark {
     z-index: -1;
     border-radius: 0.75rem; 
     padding: 2px;
-    background: linear-gradient(270deg, #8b5cf6, #ec4899, #0ea5e9);
+    background: linear-gradient(270deg, #6B8F71, #D4839A, #A8C5A0);
     background-size: 600% 600%;
     animation: gradient-border 4s ease infinite;
     opacity: 0;
@@ -73,6 +124,24 @@ html.dark {
 
   .group:hover .gradient-border-hover::before {
     opacity: 1;
+  }
+
+  .nav-chip {
+    @apply inline-flex items-center px-3.5 py-2 rounded-full text-sm font-medium whitespace-nowrap;
+    @apply text-matcha-700 dark:text-matcha-50/90;
+    @apply bg-white/60 dark:bg-white/5 border border-matcha-300/20 dark:border-white/10;
+    @apply transition-all duration-200;
+    @apply hover:bg-white hover:text-strawberry-700 hover:border-strawberry-300/40 hover:shadow-sm;
+    @apply dark:hover:bg-strawberry-700/20 dark:hover:text-strawberry-300 dark:hover:border-strawberry-500/30;
+  }
+
+  .nav-mobile-link {
+    @apply flex items-center px-4 py-3 rounded-xl text-base font-medium;
+    @apply text-matcha-700 dark:text-matcha-50/90;
+    @apply bg-white/60 dark:bg-white/5 border border-matcha-300/20 dark:border-white/10;
+    @apply transition-all duration-200 active:scale-[0.98];
+    @apply hover:bg-white hover:text-strawberry-700 hover:border-strawberry-300/40;
+    @apply dark:hover:bg-strawberry-700/20 dark:hover:text-strawberry-300 dark:hover:border-strawberry-500/30;
   }
 }
 

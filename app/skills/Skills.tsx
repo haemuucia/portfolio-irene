@@ -3,11 +3,11 @@
 import { techIcons } from "../../lib/tech-icons";
 
 const categoryGradientMap: Record<string, string> = {
-  frontend: "from-blue-400 to-cyan-300",
-  ai: "from-purple-500 to-pink-400",
-  backend: "from-gray-700 to-gray-500",
-  database: "from-yellow-400 to-orange-400",
-  tools: "from-green-400 to-teal-400",
+  frontend: "from-matcha-300 to-matcha-500",
+  ai: "from-strawberry-500 to-strawberry-300",
+  backend: "from-matcha-700 to-matcha-500",
+  database: "from-strawberry-300 to-strawberry-500",
+  tools: "from-matcha-500 to-strawberry-300",
 };
 
 const categoryTitleMap: Record<string, string> = {
@@ -30,7 +30,7 @@ export default function Skills() {
     <section id="skills" className="py-20">
       <div className="container mx-auto px-6">
       <h2
-      className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-pink-400 hover:to-yellow-300 bg-clip-text text-transparent drop-shadow-md tracking-wide transition-all duration-500">
+      className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-matcha-500 to-strawberry-500 hover:from-strawberry-300 hover:to-matcha-300 bg-clip-text text-transparent drop-shadow-md tracking-wide transition-all duration-500">
         My Skills
       </h2>
 
@@ -38,7 +38,7 @@ export default function Skills() {
           {Object.entries(skillsByCategory).map(([category, skills]) => (
             <div
               key={category}
-              className="rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#12122b] hover:shadow-xl transition-all"
+              className="rounded-2xl p-6 shadow-lg border border-matcha-300/20 dark:border-matcha-700/30 bg-white dark:bg-dark-card hover:shadow-xl transition-all"
             >
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">
                 {categoryTitleMap[category]}
@@ -64,7 +64,7 @@ export default function Skills() {
   <img
     src={Icon}
     alt={skill}
-    className="w-5 h-5 transition-transform group-hover:scale-110"
+    className="size-5 object-contain shrink-0"
   />
 ) : (
   <Icon size={20} className="transition-transform group-hover:scale-110" />

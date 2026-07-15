@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-[#133E87] via-[#608BC1] to-[#CBDCEB] dark:from-[#102445] dark:via-[#2c4369] dark:to-[#1c2e4a] text-white pt-10 pb-6 transition-colors duration-500">
+    <footer className="bg-gradient-to-br from-matcha-700 via-matcha-500 to-strawberry-300 dark:from-dark-bg dark:via-matcha-700 dark:to-dark-card text-white pt-10 pb-6 transition-colors duration-500">
       <div className="container mx-auto px-6 flex flex-col items-center gap-6 text-center">
         {/* Name / Logo */}
         <motion.h3

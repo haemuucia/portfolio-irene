@@ -34,16 +34,16 @@ export default function allcertificate() {
   const router = useRouter();
   return (
     <section
-      className="py-20 bg-white dark:bg-[#0E0A2A] transition-colors duration-300"
+      className="py-20 transition-colors duration-300"
     >
       <div className="container mx-auto px-6">
         <button
          onClick={() => router.back()}
-         className="mb-6 flex items-center text-indigo-600 hover:text-indigo-800 transition duration-300">
+         className="mb-6 flex items-center text-matcha-500 hover:text-matcha-700 dark:hover:text-matcha-300 transition duration-300">
         <ArrowLeft className="mr-2" size={20} />
           Back
         </button>
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-pink-400 hover:to-yellow-300 bg-clip-text text-transparent drop-shadow-md tracking-wide transition-all duration-500">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-matcha-500 to-strawberry-500 hover:from-strawberry-300 hover:to-matcha-300 bg-clip-text text-transparent drop-shadow-md tracking-wide transition-all duration-500">
           All Certifications & Badges
         </h2>
 
@@ -56,17 +56,15 @@ export default function allcertificate() {
               rel="noopener noreferrer"
               className="group relative rounded-xl z-0 block"
             >
-              <div className="absolute -inset-[2px] rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 animate-gradient-border blur-sm z-0" />
-              <div className="relative z-10 overflow-hidden rounded-xl shadow-md bg-white dark:bg-[#1A1A3B] border border-gray-200 dark:border-gray-700">
-                <div className="relative w-full aspect-[4/3]">
-                  <Image
-                    src={cert.src}
-                    alt={`Certification ${index + 1}`}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
+              <div className="absolute -inset-[2px] rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-matcha-500 via-strawberry-500 to-matcha-300 animate-gradient-border blur-sm z-0" />
+              <div className="overflow-hidden rounded-xl shadow-md bg-white dark:bg-dark-card border border-matcha-300/20 dark:border-matcha-700/30">
+                <Image
+                  src={cert.src}
+                  alt={`Certification ${index + 1}`}
+                  width={480}
+                  height={360}
+                  className="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
             </a>
           ))}

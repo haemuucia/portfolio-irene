@@ -3,6 +3,8 @@ import { useRef } from "react";
 import Lanyard from "./Components/Lanyard/Lanyard";
 import RotatingText from "./Components/RotatingText/RotatingText";
 import AboutMe from "./aboutme/AboutMe";
+import WorkExperience from "./work-experience/WorkExperience";
+import EducationActivities from "./education-activities/EducationActivities";
 import Projects from "./projects/ProjectSection";
 import Skills from "./skills/Skills";
 import Certification from "./certification/Certification";
@@ -15,7 +17,7 @@ export default function Home() {
   const projectRef = useRef<HTMLElement>(null);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#f5f7ff] dark:bg-[#0E0A2A] text-black dark:text-white font-outfit transition-colors duration-500 scrollbar-hide">
+    <div className="relative min-h-screen overflow-x-hidden text-black dark:text-white font-outfit transition-colors duration-500 scrollbar-hide">
       <main className="container mx-auto px-4 sm:px-6 pt-5 pb-16">
       <section
         id="hero"
@@ -29,7 +31,7 @@ export default function Home() {
   <div className="order-2 lg:order-1 lg:col-span-6 flex flex-col gap-4 sm:gap-6 justify-center text-center lg:text-left">
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
       Hello, I'm{" "}
-      <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 bg-clip-text text-transparent hover:animate-pulse transition-all duration-300">
+      <span className="bg-gradient-to-r from-matcha-500 via-strawberry-300 to-strawberry-500 bg-clip-text text-transparent hover:animate-pulse transition-all duration-300">
         Irene
       </span>
     </h1>
@@ -39,8 +41,8 @@ export default function Home() {
         I am ready to be a
       </span>
       <RotatingText
-        texts={["AI Engineer", "Web Developer", "Software Engineer", "Web Designer"]}
-        mainClassName="px-3 py-1 rounded-full bg-[#FDCBFF] text-black text-base sm:text-lg font-semibold shadow-md"
+        texts={["AI Engineer", "Data Scientist", "Software Engineer"]}
+        mainClassName="px-3 py-1 rounded-full bg-strawberry-100 text-matcha-700 dark:bg-strawberry-700/30 dark:text-strawberry-300 text-base sm:text-lg font-semibold shadow-md"
         staggerFrom="last"
         initial={{ y: "100%" }}
         animate={{ y: 0 }}
@@ -53,7 +55,7 @@ export default function Home() {
     </div>
 
     <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-md leading-relaxed mx-auto lg:mx-0">
-      Fusing AI and web technology to craft smart and impactful solutions that think and resonate deeply.
+    Transforming data into intelligent applications through AI and software engineering.
     </p>
 
     <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-5 text-xl sm:text-2xl">
@@ -66,14 +68,14 @@ export default function Home() {
     <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mt-2">
       <button
         onClick={() => projectRef.current?.scrollIntoView({ behavior: "smooth" })}
-        className="bg-gradient-to-r from-cyan-300 to-blue-400 text-black font-semibold px-5 sm:px-6 py-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+        className="bg-gradient-to-r from-matcha-500 to-matcha-300 text-white font-semibold px-5 sm:px-6 py-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
       >
         View Projects
       </button>
       <a
         href="/assets/VeronicaIrene_CV.pdf"
         download="VeronicaIrene_resume.pdf"
-        className="border border-cyan-300 text-cyan-400 font-semibold px-5 sm:px-6 py-2 rounded-xl hover:bg-cyan-300 hover:text-black transition duration-300">
+        className="border border-strawberry-300 text-strawberry-500 dark:text-strawberry-300 font-semibold px-5 sm:px-6 py-2 rounded-xl hover:bg-strawberry-100 hover:text-strawberry-700 dark:hover:bg-strawberry-700/20 transition duration-300">
         Download CV
       </a>
     </div>
@@ -82,6 +84,8 @@ export default function Home() {
       </main>
 
       <AboutMe />
+      <WorkExperience />
+      <EducationActivities />
       <Projects ref={projectRef} />
       <Skills />
       <Certification />

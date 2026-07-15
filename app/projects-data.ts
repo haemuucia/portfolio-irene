@@ -1,7 +1,18 @@
 const projects = [
   {
+    title: "SMILE-AIgen: On-Premise Context-Aware RAG Chatbot",
+    role: "AI Engineer",
+    description:
+      "An on-premise Moodle plugin that embeds a local, context-aware RAG chatbot into the LMS. Course materials are ingested and indexed in ChromaDB, queries are handled by Qwen via Ollama, and the stack is orchestrated with FastAPI, MySQL, Redis, and MinIO — keeping data private and fully under institutional control.",
+    image: "/assets/project/smileaigen.png",
+    tech: ["python", "fastapi", "mysql", "redis", "ollama", "minio", "chromadb"],
+    github: "",
+    demo: "",
+    category: ["AI"],
+  },
+  {
     title: "Dynamic 5S",
-    role: "Team Leader & AI Engineer",
+    role: "AI Engineer",
     description: "Dynamic 5S is a computer vision app built in a month-long AI bootcamp by a team of four to detect 5S compliance on computer lab desks. Trained on 1,000+ custom-labeled images, our YOLO model achieved over 90% accuracy, automating audits and showcasing scalable, real-world innovation.",
     image: "/assets/project/dynamic5s.png",
     tech: ["python", "flask", "roboflow", "ultralytics"],
@@ -21,7 +32,7 @@ const projects = [
   },
   {
     title: "SI-WAQU (Water Quality Controller)",
-    role: "AI Engineer, Web Designer, Web Developer",
+    role: "AI Engineer, Web Developer",
     description: "SI-WAQU is a smart water quality controller built using four environmental sensors and trained on 2000+ data entries. It classifies water into 5 quality levels, identifies possible causes of poor conditions such as high TDS or low pH, and provides targeted solutions to improve water quality. This system enables real-time monitoring and supports smarter water management.",
     image: "/assets/project/sic.png",
     tech: ["arduino", "python", "streamlit", "mongodb"],
@@ -41,7 +52,7 @@ const projects = [
   },
   {
     title: "Image Processing and Editing",
-    role: "Team Leader & AI Engineer",
+    role: "AI Engineer",
     description: "Built in one week for an Image Processing and Recognition course, this project was developed by a team of 4 and offers 10+ key features, including image enhancement, transformation, filtering, and edge detection.",
     image: "/assets/project/imp.jpeg",
     tech: ["python", "php", "flask"],
@@ -51,7 +62,7 @@ const projects = [
   },
   {
     title: "Lecturer Appointment",
-    role: "Team Leader & App Developer",
+    role: "App Developer",
     description: "A native Android app enabling students to book and manage appointments with 10+ lecturers via a role-based interface. Includes 3+ core features, achieving booking completion in <20s and supporting instant data filtering.",
     image: "/assets/project/lecturerappointment.png",
     tech: ["java", "android studio", "firebase"],
@@ -71,7 +82,7 @@ const projects = [
   },
   {
     title: "Emotion Detection",
-    role: "Team Leader & AI Engineer",
+    role: "AI Engineer",
     description: "One-week computer vision project built by a team of 4 to detect 7 facial emotions. Trained on 1,000+ labeled images to classify expressions with real-time prediction capability.",
     image: "/assets/project/cv.jpeg",
     tech: ["python"],
@@ -81,7 +92,7 @@ const projects = [
   },
   {
     title: "Question Answering Chatbot for Medical Questions",
-    role: "Team Leader & AI Engineer",
+    role: "AI Engineer",
     description: "A medical chatbot trained on 1,000+ QA samples, using dual-model architecture for accurate answer generation and context understanding. Supports dynamic memory to fetch and respond with the latest conversation flow.",
     image: "/assets/project/nlug.jpeg",
     tech: ["python", "streamlit"],
@@ -91,7 +102,7 @@ const projects = [
   },
   {
     title: "Voice to Text Generator",
-    role: "Team Leader & AI Engineer",
+    role: "AI Engineer",
     description: "A one-week NLP project that converts up to 1-minute recorded speech into accurate text, designed for the Natural Language Understanding course to demonstrate real-time audio transcription capabilities",
     image: "/assets/project/nlp.jpeg",
     tech: ["python"],

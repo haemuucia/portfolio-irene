@@ -34,10 +34,10 @@ export default function Awards() {
   return (
     <section
       id="awards"
-      className="py-20 bg-white dark:bg-[#0E0A2A] transition-colors duration-300"
+      className="py-20 transition-colors duration-300"
     >
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-pink-400 hover:to-yellow-300 bg-clip-text text-transparent drop-shadow-md tracking-wide transition-all duration-500">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-matcha-500 to-strawberry-500 hover:from-strawberry-300 hover:to-matcha-300 bg-clip-text text-transparent drop-shadow-md tracking-wide transition-all duration-500">
           Awards & Competitions
         </h2>
 
@@ -50,17 +50,15 @@ export default function Awards() {
               rel="noopener noreferrer"
               className="group relative rounded-xl z-0 block"
             >
-              <div className="absolute -inset-[2px] rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 animate-gradient-border blur-sm z-0" />
-              <div className="relative z-10 overflow-hidden rounded-xl bg-white dark:bg-[#1A1A3B] border border-gray-200 dark:border-gray-700 shadow-md transform hover:scale-[1.03] transition duration-300">
-                <div className="relative w-full aspect-[4/3]">
-                  <Image
-                    src={award.image}
-                    alt={award.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
+              <div className="absolute -inset-[2px] rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-matcha-500 via-strawberry-500 to-matcha-300 animate-gradient-border blur-sm z-0" />
+              <div className="overflow-hidden rounded-xl bg-white dark:bg-dark-card border border-matcha-300/20 dark:border-matcha-700/30 shadow-md transform hover:scale-[1.03] transition duration-300">
+                <Image
+                  src={award.image}
+                  alt={award.title}
+                  width={480}
+                  height={360}
+                  className="w-full aspect-[4/3] object-cover transition-transform duration-300 hover:scale-105"
+                />
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-1">
                     <h3 className="text-lg font-semibold text-black dark:text-white">
@@ -79,7 +77,7 @@ export default function Awards() {
                     </span>
                   </div>
                   {award.placement && (
-                    <p className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-1">
+                    <p className="text-sm text-strawberry-500 dark:text-strawberry-300 font-medium mb-1">
                       {award.placement}
                     </p>
                   )}

@@ -4,8 +4,10 @@ import {
   SiPython,
   SiDocker,
   SiFlask,
+  SiFastapi,
   SiMongodb,
   SiMysql,
+  SiRedis,
   SiFirebase,
   SiReact,
   SiNextdotjs,
@@ -61,17 +63,31 @@ export const techIcons: Record<string, TechIcon> = {
     icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
     category: "ai",
   },
+  ollama: {
+    icon: "https://ollama.com/public/ollama.png",
+    category: "ai",
+  },
+  chromadb: {
+    icon: "/assets/chromadb.png",
+    category: "database",
+  },
 
   flask: { icon: SiFlask, category: "backend" },
+  fastapi: { icon: SiFastapi, category: "backend" },
   laravel: { icon: SiLaravel, category: "backend" },
   "c++": { icon: SiCplusplus, category: "backend" },
   java: { icon: FaJava, category: "backend" },
 
   mongodb: { icon: SiMongodb, category: "database" },
   mysql: { icon: SiMysql, category: "database" },
+  redis: { icon: SiRedis, category: "database" },
   firebase: { icon: SiFirebase, category: "database" },
 
   docker: { icon: SiDocker, category: "tools" },
+  minio: {
+    icon: "/assets/minio.png",
+    category: "tools",
+  },
   github: { icon: SiGithub, category: "tools" },
   git: { icon: SiGit, category: "tools" },
   figma: { icon: SiFigma, category: "tools" },

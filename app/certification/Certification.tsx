@@ -3,17 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import AllCertificate from "../allcertificate/page";
 
 const certifications = [
   { src: "/assets/certificate/genai.png", link: "https://www.cloudskillsboost.google/public_profiles/a35ffde6-ad62-4335-ba48-5a1612d2ab87/badges/14478798" },
   { src: "/assets/certificate/llm.png", link: "https://www.cloudskillsboost.google/public_profiles/a35ffde6-ad62-4335-ba48-5a1612d2ab87/badges/14471965" },
   { src: "/assets/certificate/ibmgranite.png", link: "https://drive.google.com/your-ibm-cert-link" },
-  { src: "assets/certificate/cloudconcepts.png", link: "https://learn.microsoft.com/api/achievements/share/en-us/ireneee-2321/A42G4HN7?sharingId=33A27902554D9892"},
-  { src: "assets/certificate/architecture.png", link: "https://learn.microsoft.com/api/achievements/share/en-us/ireneee-2321/K6J4A9EB?sharingId=33A27902554D9892"},
-  { src: "aseets/certificate/cloudnativeapp.png", link: "https://learn.microsoft.com/api/achievements/share/en-us/ireneee-2321/NVAVAMJF?sharingId=33A27902554D9892"},
-  { src: "assets/certificate/documentintelligence.png", link: "https://learn.microsoft.com/api/achievements/share/en-us/ireneee-2321/XQAKBATY?sharingId=33A27902554D9892"},
-  { src: "assets/certificate/DevelopGenAI.png", link: "https://learn.microsoft.com/api/achievements/share/en-us/ireneee-2321/NVAVYB9F?sharingId=33A27902554D9892"},
+  { src: "/assets/certificate/cloudconcepts.png", link: "https://learn.microsoft.com/api/achievements/share/en-us/ireneee-2321/A42G4HN7?sharingId=33A27902554D9892"},
+  { src: "/assets/certificate/architecture.png", link: "https://learn.microsoft.com/api/achievements/share/en-us/ireneee-2321/K6J4A9EB?sharingId=33A27902554D9892"},
+  { src: "/assets/certificate/cloudnativeapp.png", link: "https://learn.microsoft.com/api/achievements/share/en-us/ireneee-2321/NVAVAMJF?sharingId=33A27902554D9892"},
+  { src: "/assets/certificate/documentintelligence.png", link: "https://learn.microsoft.com/api/achievements/share/en-us/ireneee-2321/XQAKBATY?sharingId=33A27902554D9892"},
+  { src: "/assets/certificate/DevelopGenAI.png", link: "https://learn.microsoft.com/api/achievements/share/en-us/ireneee-2321/NVAVYB9F?sharingId=33A27902554D9892"},
   { src: "/assets/certificate/codingprogramming.jpeg", link: "https://drive.google.com/file/d/1Pu-QYVkyYaHHo31O2AaZZALylfQ5JLNA/view" },
   { src: "/assets/certificate/iot1.jpeg", link: "https://drive.google.com/file/d/1krFTk97I9VEV5W9wBQfT3rWN5O7OvKzY/view" },
   { src: "/assets/certificate/aisic.jpeg", link: "https://drive.google.com/file/d/1FdsQtCRTMW4Uzm41TJjm0tCHFBg8RmIg/view" },
@@ -37,10 +36,10 @@ export default function Certification() {
   return (
     <section
       id="certification"
-      className="py-20 bg-white dark:bg-[#0E0A2A] transition-colors duration-300"
+      className="py-20 transition-colors duration-300"
     >
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-pink-400 hover:to-yellow-300 bg-clip-text text-transparent drop-shadow-md tracking-wide transition-all duration-500">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-matcha-500 to-strawberry-500 hover:from-strawberry-300 hover:to-matcha-300 bg-clip-text text-transparent drop-shadow-md tracking-wide transition-all duration-500">
           Certifications & Badges
         </h2>
 
@@ -53,17 +52,15 @@ export default function Certification() {
               rel="noopener noreferrer"
               className="group relative rounded-xl z-0 block"
             >
-              <div className="absolute -inset-[2px] rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 animate-gradient-border blur-sm z-0" />
-              <div className="relative z-10 overflow-hidden rounded-xl shadow-md bg-white dark:bg-[#1A1A3B] border border-gray-200 dark:border-gray-700">
-                <div className="relative w-full aspect-[4/3]">
-                  <Image
-                    src={cert.src}
-                    alt={`Certification ${index + 1}`}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
+              <div className="absolute -inset-[2px] rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-matcha-500 via-strawberry-500 to-matcha-300 animate-gradient-border blur-sm z-0" />
+              <div className="overflow-hidden rounded-xl shadow-md bg-white dark:bg-dark-card border border-matcha-300/20 dark:border-matcha-700/30">
+                <Image
+                  src={cert.src}
+                  alt={`Certification ${index + 1}`}
+                  width={480}
+                  height={360}
+                  className="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
             </a>
           ))}
@@ -72,7 +69,7 @@ export default function Certification() {
         <div className="flex justify-center">
           <button
             onClick={() => router.push("/allcertificate")} 
-            className="px-6 py-2 bg-gradient-to-r from-cyan-300 to-blue-400 text-black font-semibold rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+            className="px-6 py-2 bg-gradient-to-r from-matcha-500 to-matcha-300 text-white font-semibold rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
           >
             {showAll ? "Show Less" : "Show More"}
           </button>
